@@ -30,8 +30,8 @@ x-shared:
       ELASTICSEARCH_SSL_VERIFY:
       NGINX_PORT:
       NGINX_SERVER_NAME:
-      NGINX_SERVER_SCHEME: https
-      RAILS_TRUSTED_PROXIES: ['coolify-proxy', 'traefik', '127.0.0.1', 'localhost', '::1', '172.24.0.2']
+      NGINX_SERVER_SCHEME: "https"
+      RAILS_TRUSTED_PROXIES: "['coolify-proxy', 'traefik', '127.0.0.1', 'localhost', '::1', '172.24.0.2']"
       ZAMMAD_WEB_CONCURRENCY:
       ZAMMAD_SESSION_JOBS:
       ZAMMAD_PROCESS_SCHEDULED:
