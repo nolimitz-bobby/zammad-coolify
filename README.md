@@ -1,3 +1,12 @@
+# Zammad Coolify
+
+This repository was created to allow the easy deployment of [Zammad Community](https://zammad.org/) (an open source helpdesk/ticketing tool) through the [Coolify](https://coolify.io/) platform.
+For now, it only works if [Traefik](https://traefik.io/traefik/) is configured as the reverse proxy of the Coolify system (which it should be by default). The relevant environment variables "NGINX_SERVER_SCHEME" and "RAILS_TRUSTED_PROXIES" are configured to work with the default Coolify configuration.
+
+## Deployment
+
+To deploy this image with Coolify, simply create a new Resource from a public git repository (this). Make sure to select "Docker Compose" as the "Build Pack" and change the default "docker-compose.yaml" to "docker-compose.yml" (without the a). The default branch used by Coolify is "main". This cannot be changed in the initial setup, thus first create the resource, then head to "Source" and change the git branch to "master". If you then reload your Coolify interface, the Docker Compose file should be fetched correctly. You can then apply your own customizations such as the "Domains for Zammad Nginx", which are your publicly facing domains for the helpdesk (these will be picked up by traefik and relayed correctly).
+
 # Welcome to Zammad
 
 Zammad is a web based open source helpdesk/ticket system with many features
