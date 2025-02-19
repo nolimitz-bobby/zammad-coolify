@@ -28,7 +28,7 @@ x-shared:
       ELASTICSEARCH_NAMESPACE:
       ELASTICSEARCH_REINDEX:
       ELASTICSEARCH_SSL_VERIFY:
-      NGINX_PORT: "8084"
+      NGINX_PORT:
       NGINX_SERVER_NAME:
       NGINX_SERVER_SCHEME: "https"
       RAILS_TRUSTED_PROXIES: "['coolify-proxy', 'traefik', '127.0.0.1', 'localhost', '::1', '172.24.0.2']"
@@ -80,7 +80,7 @@ services:
     expose:
       - "${NGINX_PORT:-8080}"
     ports:
-      - "${NGINX_EXPOSE_PORT:-8080}:${NGINX_PORT:-8080}"
+      - "${NGINX_EXPOSE_PORT:-8084}:${NGINX_PORT:-8080}"
     depends_on:
       - zammad-railsserver
 
